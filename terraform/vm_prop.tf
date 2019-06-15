@@ -3,16 +3,16 @@ resource "azurerm_virtual_machine" "la_manager" {
   location              = var.location
   resource_group_name   = azurerm_resource_group.terraform_rg.name
   network_interface_ids = [azurerm_network_interface.public_nic.id]
-  vm_size               = "Standard_DS3_v2"
+  vm_size               = "Standard_D4s_v3"
 
   #This will delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
 
   storage_image_reference {
-    publisher = "OpenLogic"
-    offer     = "CentOS"
-    sku       = "7.2"
-    version   = "7.2.20160303"
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
   }
 
   storage_os_disk {
@@ -42,7 +42,7 @@ resource "azurerm_virtual_machine" "la_manager" {
   }
 
   tags = {
-    group = "OpenLogic-Cluster"
+    group = "Canonical-Cluster"
   }
 }
 
@@ -52,16 +52,16 @@ resource "azurerm_virtual_machine" "la_master" {
   location              = var.location
   resource_group_name   = azurerm_resource_group.terraform_rg.name
   network_interface_ids = [azurerm_network_interface.public_nic1.id]
-  vm_size               = "Standard_DS3_v2"
+  vm_size               = "Standard_D4s_v3"
 
   #This will delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
 
   storage_image_reference {
-    publisher = "OpenLogic"
-    offer     = "CentOS"
-    sku       = "7.2"
-    version   = "7.2.20160303"
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
   }
 
   storage_os_disk {
@@ -91,7 +91,7 @@ resource "azurerm_virtual_machine" "la_master" {
   }
 
   tags = {
-    group = "OpenLogic-Cluster"
+    group = "Canonical-Cluster"
   }
 }
 
@@ -101,16 +101,16 @@ resource "azurerm_virtual_machine" "la_worker1" {
   location              = var.location
   resource_group_name   = azurerm_resource_group.terraform_rg.name
   network_interface_ids = [azurerm_network_interface.public_nic2.id]
-  vm_size               = "Standard_DS2_v2"
+  vm_size               = "Standard_D4s_v3"
 
   #This will delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
 
   storage_image_reference {
-    publisher = "OpenLogic"
-    offer     = "CentOS"
-    sku       = "7.2"
-    version   = "7.2.20160303"
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
   }
 
   storage_os_disk {
@@ -140,7 +140,7 @@ resource "azurerm_virtual_machine" "la_worker1" {
   }
 
   tags = {
-    group = "OpenLogic-Cluster"
+    group = "Canonical-Cluster"
   }
 }
 
@@ -150,16 +150,16 @@ resource "azurerm_virtual_machine" "la_worker2" {
   location              = var.location
   resource_group_name   = azurerm_resource_group.terraform_rg.name
   network_interface_ids = [azurerm_network_interface.public_nic3.id]
-  vm_size               = "Standard_DS2_v2"
+  vm_size               = "Standard_D4s_v3"
 
   #This will delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
 
   storage_image_reference {
-    publisher = "OpenLogic"
-    offer     = "CentOS"
-    sku       = "7.2"
-    version   = "7.2.20160303"
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
   }
 
   storage_os_disk {
@@ -189,7 +189,7 @@ resource "azurerm_virtual_machine" "la_worker2" {
   }
 
   tags = {
-    group = "OpenLogic-Cluster"
+    group = "Canonical-Cluster"
   }
 }
 
@@ -199,16 +199,16 @@ resource "azurerm_virtual_machine" "la_worker3" {
   location              = var.location
   resource_group_name   = azurerm_resource_group.terraform_rg.name
   network_interface_ids = [azurerm_network_interface.public_nic4.id]
-  vm_size               = "Standard_DS2_v2"
+  vm_size               = "Standard_D4s_v3"
 
   #This will delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
 
   storage_image_reference {
-    publisher = "OpenLogic"
-    offer     = "CentOS"
-    sku       = "7.2"
-    version   = "7.2.20160303"
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
   }
 
   storage_os_disk {
@@ -238,7 +238,7 @@ resource "azurerm_virtual_machine" "la_worker3" {
   }
 
   tags = {
-    group = "OpenLogic-Cluster"
+    group = "Canonical-Cluster"
   }
 }
 
