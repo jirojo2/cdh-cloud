@@ -2,7 +2,7 @@ resource "azurerm_public_ip" "manager_pip" {
   name                         = "cdh-pip"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.terraform_rg.name
-  public_ip_address_allocation = "static"
+  allocation_method            = "Static"
 
   tags = {
     group = "Coudera-Cluster"
@@ -30,7 +30,7 @@ resource "azurerm_public_ip" "master_pip" {
   name                         = "cdh-pip1"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.terraform_rg.name
-  public_ip_address_allocation = "static"
+  allocation_method            = "Static"
 
   tags = {
     group = "Coudera-Cluster"
@@ -58,7 +58,7 @@ resource "azurerm_public_ip" "worker1_pip" {
   name                         = "cdh-pip2"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.terraform_rg.name
-  public_ip_address_allocation = "static"
+  allocation_method            = "Static"
 
   tags = {
     group = "Coudera-Cluster"
@@ -86,7 +86,7 @@ resource "azurerm_public_ip" "worker2_pip" {
   name                         = "cdh-pip3"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.terraform_rg.name
-  public_ip_address_allocation = "static"
+  allocation_method            = "Static"
 
   tags = {
     group = "Coudera-Cluster"
@@ -114,7 +114,7 @@ resource "azurerm_public_ip" "worker3_pip" {
   name                         = "cdh-pip4"
   location                     = var.location
   resource_group_name          = azurerm_resource_group.terraform_rg.name
-  public_ip_address_allocation = "static"
+  allocation_method            = "Static"
 
   tags = {
     group = "Coudera-Cluster"
